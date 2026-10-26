@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project – Shofiyatul Nur Ghilbah</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="cv-new.html">CV</a></li>
+      </ul>
+      <div class="language-switcher">
+        <button class="lang-btn" id="lang-btn">
+          <i class="fa-solid fa-globe"></i> EN
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <a href="#" onclick="switchLanguage('en'); return false;">🇬🇧 English</a>
+          <a href="#" onclick="switchLanguage('id'); return false;">🇮🇩 Indonesian</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container">
+      <h1 class="page-title"><span>Portfolio</span></h1>
+      <p class="page-subtitle">Projects and works I've created</p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio-section section">
+    <div class="container">
+
+      <div class="portfolio-grid">
+        
+        <!-- PROJECT 1: Desain Mug -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-slider">
+            <div class="slider-container">
+              <img src="https://i.imgur.com/z2Eqe9j.png" alt="Desain Mug 1" class="slider-img active" />
+              <img src="https://i.imgur.com/AaTA1jr.png" alt="Desain Mug 2" class="slider-img" />
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(this, -1)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" onclick="changeSlide(this, 1)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+              <span class="dot active" onclick="currentSlide(this, 0)"></span>
+              <span class="dot" onclick="currentSlide(this, 1)"></span>
+            </div>
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">01</span>
+            <h3>Mug Design</h3>
+            <p>Mug design concept inspired by favorite artist, packed with soft, cute, and aesthetic style.</p>
+            <div class="portfolio-tags">
+              <span>Canva</span>
+              <span>Graphic Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Project Group Website -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-image">
+            <img src="https://i.imgur.com/1CVfrWj.png" alt="Project Group" class="portfolio-img-main" />
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">02</span>
+            <h3>Project Group Website</h3>
+            <p>A website for tracking game progress and sharing reviews, featuring a modern and interactive design.</p>
+            <div class="portfolio-tags">
+              <span>Web Development</span>
+              <span>UI Design</span>
+            </div>
+            <a href="https://whosop.github.io/game-journal-review/" target="_blank" class="portfolio-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> View Website
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: Microsite Shop -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-placeholder" style="background: var(--pastel-purple);">
+            <i class="fa-solid fa-store"></i>
+            <span>s.id/myshoply</span>
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">03</span>
+            <h3>Microsite Shop</h3>
+            <p>Simple digital store based on microsite using S.id platform that's practical and easy to use.</p>
+            <div class="portfolio-tags">
+              <span>Microsite</span>
+              <span>Digital Store</span>
+            </div>
+            <a href="https://s.id/myshoply" target="_blank" class="portfolio-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Shop
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Koleksi Poster Digital -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-placeholder" style="background: var(--pastel-pink);">
+            <i class="fa-brands fa-adobe"></i>
+            <span>Adobe Illustrator</span>
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">04</span>
+            <h3>Digital Poster Collection</h3>
+            <p>Poster design collection with Adobe Illustrator, various themes and attractive visual concepts.</p>
+            <div class="portfolio-tags">
+              <span>Adobe Illustrator</span>
+              <span>Poster Design</span>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1I8zXnCwyi8Bahe6UKmardrZ54x_rPkcX?usp=sharing" target="_blank" class="portfolio-link">
+              <i class="fa-brands fa-google-drive"></i> View Collection
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: Cisco IT Essentials -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-image">
+            <img src="https://i.imgur.com/gfG8npO.png" alt="Sertifikat Cisco" class="portfolio-img-main" />
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">05</span>
+            <h3>Cisco IT Essentials</h3>
+            <p>Cisco IT Essentials certificate demonstrating fundamental understanding of computer hardware, operating systems, and troubleshooting.</p>
+            <div class="portfolio-tags">
+              <span>Cisco</span>
+              <span>IT Essentials</span>
+              <span>Networking</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1KPtlIdOKPX84cve8OvGwLY5DsWolbLaf/view?usp=drive_link" target="_blank" class="portfolio-link">
+              <i class="fa-brands fa-google-drive"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 6: Paham AI Certificate -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-placeholder" style="background: linear-gradient(135deg, #059669, #10b981);">
+            <i class="fa-solid fa-brain"></i>
+            <span>AI Literacy</span>
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">06</span>
+            <h3>Paham AI - AI Literacy Certification</h3>
+            <p>AI Literacy competency certificate from Senopati Academy national program in collaboration with Indonesian Police (Polri) and Ministry of Education, achieved perfect score of 100/100.</p>
+            <div class="portfolio-tags">
+              <span>AI Literacy</span>
+              <span>Machine Learning</span>
+              <span>Senopati Academy</span>
+            </div>
+            <a href="https://drive.google.com/file/d/11pXp3ymDHat1jjduJKkpckJ7Zo7o22MT/view?usp=sharing" target="_blank" class="portfolio-link">
+              <i class="fa-brands fa-google-drive"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 7: Hybrid Topology -->
+        <div class="portfolio-card">
+          <div class="portfolio-card-image">
+            <img src="topologi-hybrid.png" alt="Hybrid Topology Network" class="portfolio-img-main" />
+          </div>
+          <div class="portfolio-card-content">
+            <span class="portfolio-number">07</span>
+            <h3>Hybrid Topology Network Design</h3>
+            <p>Complex network topology design combining multiple network architectures (Star, Ring, Bus) in a hybrid configuration using Cisco Packet Tracer. Demonstrates advanced understanding of network design principles and scalability.</p>
+            <div class="portfolio-tags">
+              <span>Cisco Packet Tracer</span>
+              <span>Hybrid Topology</span>
+              <span>Network Architecture</span>
+              <span>Advanced Design</span>
+            </div>
+            <a href="https://drive.google.com/file/d/15Y9aM1rnxTt-8hXN0TUAuJAjIR_07ZNP/view?usp=sharing" target="_blank" class="portfolio-link">
+              <i class="fa-solid fa-network-wired"></i> View Cisco File
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Shofiyatul Nur Ghilbah</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/shofiyatulng/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/whosop" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:shofiyatulnur08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

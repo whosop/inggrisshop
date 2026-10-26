@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV – Shofiyatul Nur Ghilbah</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Print Styles - Optimized for 1 Page A4 */
+    @media print {
+      @page {
+        size: A4;
+        margin: 0.4cm;
+      }
+      
+      .navbar, .page-header, .footer, .btn-download-cv { 
+        display: none !important; 
+      }
+      
+      body { 
+        background: white !important;
+        margin: 0;
+        padding: 0;
+        font-size: 8pt !important;
+      }
+      
+      .cv-section.section {
+        padding: 0 !important;
+      }
+      
+      .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      
+      .cv-modern-wrapper { 
+        box-shadow: none !important; 
+        margin: 0 !important;
+        padding: 0.5cm 0.6cm !important;
+        border: none !important;
+        max-width: 100% !important;
+      }
+      
+      /* Header Optimization */
+      .cv-header-modern {
+        margin-bottom: 0.25cm !important;
+        padding-bottom: 0.2cm !important;
+        grid-template-columns: 3.5cm 1fr !important;
+        gap: 0.4cm !important;
+      }
+      
+      .cv-photo-box {
+        width: 3.5cm !important;
+        height: 4.3cm !important;
+        padding: 2px !important;
+      }
+      
+      .cv-name-modern {
+        font-size: 16pt !important;
+        margin: 0 0 0.15cm 0 !important;
+        line-height: 1.1 !important;
+      }
+      
+      .cv-contact-modern,
+      .cv-social-modern {
+        font-size: 7pt !important;
+        margin-bottom: 0.1cm !important;
+        gap: 0.15cm !important;
+        line-height: 1.2 !important;
+      }
+      
+      /* Section Optimization */
+      .cv-section-modern {
+        margin-bottom: 0.3cm !important;
+        page-break-inside: avoid;
+      }
+      
+      .cv-section-title-modern {
+        font-size: 9pt !important;
+        margin: 0 0 0.1cm 0 !important;
+        letter-spacing: 0.03em !important;
+      }
+      
+      .cv-section-line {
+        height: 1px !important;
+        margin-bottom: 0.2cm !important;
+      }
+      
+      .cv-section-text {
+        font-size: 7.5pt !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
+      }
+      
+      /* Entry Optimization */
+      .cv-entry-modern {
+        margin-bottom: 0.25cm !important;
+      }
+      
+      .cv-entry-header,
+      .cv-entry-header-block {
+        margin-bottom: 0.1cm !important;
+      }
+      
+      .cv-entry-header strong,
+      .cv-entry-header-block strong {
+        font-size: 8pt !important;
+      }
+      
+      .cv-date-italic {
+        font-size: 7pt !important;
+      }
+      
+      .cv-entry-desc {
+        margin-left: 0.3cm !important;
+        font-size: 7.5pt !important;
+      }
+      
+      .cv-bullet {
+        font-size: 8pt !important;
+      }
+      
+      /* List Optimization */
+      .cv-list-modern {
+        margin: 0.15cm 0 0 0 !important;
+      }
+      
+      .cv-list-modern li {
+        padding-left: 0.35cm !important;
+        margin-bottom: 0.1cm !important;
+        font-size: 7.5pt !important;
+        line-height: 1.25 !important;
+      }
+      
+      .cv-list-modern li::before {
+        font-size: 7pt !important;
+      }
+      
+      .cv-subsection-title {
+        font-size: 8pt !important;
+        margin: 0.2cm 0 0.1cm 0 !important;
+      }
+      
+      /* Force compact spacing */
+      .cv-section-modern:last-child {
+        margin-bottom: 0 !important;
+      }
+      
+      .cv-entry-modern:last-child {
+        margin-bottom: 0.15cm !important;
+      }
+      
+      .cv-list-modern li:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cv-new.html" class="active">CV</a></li>
+      </ul>
+      <div class="language-switcher">
+        <button class="lang-btn" id="lang-btn">
+          <i class="fa-solid fa-globe"></i> EN
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+          <a href="#" onclick="switchLanguage('en'); return false;">🇬🇧 English</a>
+          <a href="#" onclick="switchLanguage('id'); return false;">🇮🇩 Indonesian</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container">
+      <h1 class="page-title"><span>Curriculum Vitae</span></h1>
+      <p class="page-subtitle">My complete profile</p>
+      <div class="cv-download-wrapper">
+        <button class="btn-download-cv" onclick="window.print()">
+          <i class="fa-solid fa-download"></i> Download CV
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV CONTENT -->
+  <section class="cv-section section">
+    <div class="container">
+      <div class="cv-modern-wrapper">
+        
+        <!-- CV HEADER -->
+        <div class="cv-header-modern">
+          <div class="cv-photo-box">
+            <img src="bg navy.jpeg" alt="Shofiyatul Nur Ghilbah" class="cv-photo-modern"/>
+          </div>
+          <div class="cv-header-info">
+            <h1 class="cv-name-modern">Shofiyatul Nur Ghilbah</h1>
+            <div class="cv-contact-modern">
+              <span><i class="fa-solid fa-location-dot"></i> Semarang, Jawa Tengah</span>
+              <span class="separator">|</span>
+              <span><i class="fa-solid fa-phone"></i> 0812-2968-5851</span>
+              <span class="separator">|</span>
+              <span><i class="fa-solid fa-envelope"></i> shofiyatulnur08@gmail.com</span>
+            </div>
+            <div class="cv-social-modern">
+              <span><i class="fa-brands fa-github"></i> whosop</span>
+              <span class="separator">|</span>
+              <span><i class="fa-solid fa-user"></i> Shofiyatul Nur Ghilbah</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABOUT ME -->
+        <div class="cv-section-modern">
+          <h2 class="cv-section-title-modern">ABOUT ME</h2>
+          <div class="cv-section-line"></div>
+          <p class="cv-section-text">Highly dedicated Information Technology student with a strong background in IT systems and leadership. Experienced in designing web journal projects and configuring Cisco- and Oracle-based network simulations. Proven leadership, discipline, and social responsibility developed through active involvement in the Dewan Penggalang. Eager to leverage technical expertise and collaborative skills to support organizational goals.</p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="cv-section-modern">
+          <h2 class="cv-section-title-modern">EDUCATION</h2>
+          <div class="cv-section-line"></div>
+          
+          <div class="cv-entry-modern">
+            <div class="cv-entry-header">
+              <span class="cv-bullet">•</span>
+              <strong>SMPN 27 SEMARANG</strong>
+              <span class="cv-date-italic">July, 2021 - July 2024</span>
+            </div>
+          </div>
+          
+          <div class="cv-entry-modern">
+            <div class="cv-entry-header">
+              <span class="cv-bullet">•</span>
+              <strong>SMKN 7 SEMARANG</strong>
+              <span class="cv-date-italic">July, 2024 - now</span>
+            </div>
+            <div class="cv-entry-desc">Sistem Informasi Jaringan & Aplikasi</div>
+          </div>
+        </div>
+
+        <!-- INTERNSHIP/ORGANIZATIONAL EXPERIENCE -->
+        <div class="cv-section-modern">
+          <h2 class="cv-section-title-modern">INTERNSHIP/ORGANIZATIONAL EXPERIENCE</h2>
+          <div class="cv-section-line"></div>
+          
+          <div class="cv-entry-modern">
+            <div class="cv-entry-header-block">
+              <div>
+                <strong>Vice Leader, Scout Council (Dewan Penggalang)</strong>
+                <span class="cv-date-italic"> August, 2021 - November, 2023</span>
+              </div>
+            </div>
+            <ul class="cv-list-modern">
+              <li>Co-led a team of 30+ junior scouts in planning and executing leadership training and outdoor activities.</li>
+              <li>Facilitated character-building programs focused on discipline, teamwork, and social responsibility.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROJECT EXPERIENCE -->
+        <div class="cv-section-modern">
+          <h2 class="cv-section-title-modern">PROJECT EXPERIENCE</h2>
+          <div class="cv-section-line"></div>
+          
+          <div class="cv-entry-modern">
+            <div class="cv-entry-header-block">
+              <div>
+                <strong>Web Journal & Review Development</strong>
+                <span class="cv-date-italic"> October, 2025 - April, 2026</span>
+              </div>
+            </div>
+            <ul class="cv-list-modern">
+              <li>Designed and built a journal website platform with intuitive interface for publishing and reviewing research articles.</li>
+              <li>Implemented content categorization and navigation functions for document exploration.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry-modern">
+            <div class="cv-entry-header-block">
+              <div>
+                <strong>Development of a 3D Visual Storyboard, Alice Software (In Progress)</strong>
+                <span class="cv-date-italic"> August, 2025</span>
+              </div>
+            </div>
+            <ul class="cv-list-modern">
+              <li>Designed visual storyboard and developed initial logical structure for interactive 3D animation using Alice 3.</li>
+              <li>Implemented content categorization and navigation functions for document exploration.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL INFORMATION -->
+        <div class="cv-section-modern">
+          <h2 class="cv-section-title-modern">ADDITIONAL INFORMATION</h2>
+          <div class="cv-section-line"></div>
+          
+          <p class="cv-subsection-title"><strong>Technical & Non-Technical Skills:</strong></p>
+          <ul class="cv-list-modern">
+            <li><strong>Technical:</strong> Word, Excel, Web Development, HTML/CSS, 3D Storyboarding (Alice 3D), Cisco Packet Tracer, Database Fundamentals, Oracle SQL.</li>
+            <li><strong>Non-Technical:</strong> Leadership, Logical Thinking, Creativity, Event Management, Communication, Problem Solving.</li>
+          </ul>
+
+          <p class="cv-subsection-title"><strong>Certification:</strong></p>
+          <ul class="cv-list-modern">
+            <li>IT Essentials, Cisco Networking Academy & SMK Negeri 7 Semarang — February 4, 2025</li>
+            <li>Java Fundamentals, Oracle Academy & SMK Negeri 7 Semarang — August 26, 2026</li>
+            <li>Paham AI - Literasi Kecerdasan Artifisial, Senopati Academy, Polri & Kemendikdasmen — August 19, 2026</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Shofiyatul Nur Ghilbah</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/shofiyatulng/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/whosop" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:shofiyatulnur08@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
